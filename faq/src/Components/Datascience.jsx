@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faFacebook, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import {faFacebook, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
+
+import { faFacebookF, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
+
 import img1 from "./images/workshop4.png";
 import img2 from "./images/workshop5.png";
 import img3 from "./images/workshop6.png";
-import eclipse from "./images/Ellipse 321.png"
+
+import img4 from './Ellipse 321.png';
+import logo from './Group 39512.png';
+import check from './check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24 2.png';
+
 
 const Datascience = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -104,60 +109,81 @@ const Datascience = () => {
         </div>
       </div>
     </div>
-      <footer className="bg-black text-white py-8 px-4 mt-6" >
-        <hr className="border-t border-gray-300 mb-8 relative -top-14 p-0" />
-
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 relative -top-10">
-          {/* Company Section */}
-          <div>
-            <h3 className="text-lg font-semibold mb-2">COMPANY</h3>
-            <ul>
-              <li className="mb-1"><a href="#" className="hover:underline">About Us</a></li>
-              <li className="mb-1"><a href="#" className="hover:underline">Privacy policy</a></li>
-              <li className="mb-1"><a href="#" className="hover:underline">Blog</a></li>
-              <li className="mb-1"><a href="#" className="hover:underline">Careers</a></li>
-            </ul>
-          </div>
-
-          {/* Support Section */}
-          <div>
-            <h3 className="text-lg font-semibold mb-2">Support</h3>
-            <ul>
-              <li className="mb-1"><a href="#" className="hover:underline">Contact Us</a></li>
-              <li className="mb-1"><a href="#" className="hover:underline">Community</a></li>
-            </ul>
-          </div>
-
-          {/* Socials Section */}
-          <div>
-            <h3 className="text-lg font-semibold mb-2">Socials</h3>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-500 hover:text-white">
-                <FontAwesomeIcon icon={faFacebook} className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-500 hover:text-white">
-                <FontAwesomeIcon icon={faLinkedin} className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-500 hover:text-white">
-                <FontAwesomeIcon icon={faTwitter} className="h-6 w-6" />
-              </a>
-            </div>
-          </div>
-
-          {/* Sign Up Section */}
-          <div>
-            <h2 className="text-lg font-semibold mb-2">Sign Up</h2>
-            <form className="mt-3">
-              <input
-                type="text"
-                placeholder="Enter your email"
-                className="border px-3 py-2 w-full rounded"
-              />
-              <img src={eclipse}  className=" relative top-20 pb-2"/>
-            </form>
+    <footer className="footer bg-black text-white py-5 px-4">
+        <div className="newsletter mb-5 text-right">
+          <h2 className="flex items-center gap-2 text-left text-2xl font-bold">
+            <img src={logo} alt="logo" className="w-16 h-16" />
+            Hubnex Educate
+          </h2>
+          <div className="flex items-center justify-end gap-2">
+            <p className="text-lg font-normal">Signup for our <span className="font-bold">Newsletter</span></p>
+            <input
+              className="input1 px-4 py-2 w-72 rounded-lg border-none"
+              type="search"
+              placeholder="Enter your email"
+            />
+            <img className="w-6 h-6" src={check} alt="icon" />
           </div>
         </div>
+        <hr className="border-t border-white opacity-50" />
+        <div className="footer-info flex flex-col md:flex-row gap-8 md:gap-24 mt-4">
+          <div className="company-info text-left">
+            <h3 className="text-xl font-bold">COMPANY</h3>
+            <ul className="list-none mt-4">
+              <li className="my-4">
+                <a href="#about" className="text-white no-underline">About Us</a>
+              </li>
+              <li className="my-4">
+                <a href="#privacy" className="text-white no-underline">Privacy policy</a>
+              </li>
+              <li className="my-4">
+                <a href="#blog" className="text-white no-underline">Blog</a>
+              </li>
+              <li className="my-4">
+                <a href="#careers" className="text-white no-underline">Careers</a>
+              </li>
+            </ul>
+          </div>
+          <div className="support text-left">
+            <h3 className="text-xl font-bold">Support</h3>
+            <ul className="list-none mt-4">
+              <li className="my-4">
+                <a href="#contact" className="text-white no-underline">Contact Us</a>
+              </li>
+              <li className="my-4">
+                <a href="#community" className="text-white no-underline">Community</a>
+              </li>
+            </ul>
+          </div>
+          <div className="socials text-center">
+            <h3 className="text-xl font-bold">Socials</h3>
+            <ul className="flex justify-center mt-4 gap-3">
+              <li>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faFacebookF} className="w-4 h-4 p-2 bg-white rounded-full text-black hover:scale-110 transition-transform flex items-center justify-center" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faLinkedinIn} className="w-4 h-4 p-2 bg-white rounded-full text-black hover:scale-110 transition-transform flex items-center justify-center" />
+                </a>
+              </li>
+              <li>
+                <a href="https://x.com/i/flow/login" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faTwitter} className="w-4 h-4 p-2 bg-white rounded-full text-black hover:scale-110 transition-transform flex items-center justify-center" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="fotter-img flex items-end">
+            <img src={img4} alt="footer-img" className="w-52 h-48 " />
+          </div>
+        </div>
+        <div>
+          <p className="text-sm font-normal text-center mt-4">2024 Hubnex Educate. All rights reserved.</p>
+        </div>
       </footer>
+      
     </div>
     
   )
